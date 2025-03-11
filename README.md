@@ -16,10 +16,10 @@ NewTabFix is een Chrome-extensie die het probleem oplost dat optreedt op Chromeb
 
 ## Installatie
 
-1. Download of kloon de repository naar je lokale machine.
-2. Ga naar `chrome://extensions/` in je Chrome-browser.
-3. Zet de ontwikkelaarsmodus aan (rechtsonder).
-4. Klik op "Ingepakte extensie laden" en selecteer de map waarin je de extensie hebt gedownload of gekloond.
+1. Download of kloon de repository naar je chromebook en unzip deze.
+2. Ga naar `chrome://extensions/` in je Chrome-browser op een chromebook.
+3. Zet de ontwikkelaarsmodus aan (rechtsboven).
+4. Klik op "Uitgepakte extensie laden" en selecteer de map die je verkrijgt uit de zip-file.
 5. De extensie wordt nu geïnstalleerd en zou automatisch moeten werken wanneer je een nieuw tabblad opent.
 
 ## Licentie
