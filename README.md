@@ -12,7 +12,6 @@ NewTabFix is een Chrome-extensie die het probleem oplost dat optreedt op Chromeb
 
 - Detecteert wanneer een nieuw tabblad wordt geopend.
 - Sluit automatisch `about:blank` pagina's die worden geopend als gevolg van het nieuwe tabblad.
-- Reset de detectie na 2 seconden van inactiviteit.
 - Werkt uitsluitend op ChromeOS (Chromebooks).
 
 ## Installatie
