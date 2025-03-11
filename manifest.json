@@ -1,0 +1,16 @@
+{
+    "manifest_version": 3,
+    "name": "NewTab Blocker - chromeos only",
+    "description": "This extension blocks or closes about:blank on new tabs.",
+    "version": "1.3",
+    "permissions": [
+      "tabs"
+    ],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "host_permissions": [
+      "http://*/*",
+      "https://*/*"
+    ]
+  }
