@@ -34,10 +34,22 @@ chrome.runtime.getPlatformInfo((info) => {
         
         chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
             if (isNewTabOpened && tab.url === "about:blank") {
-                chrome.tabs.remove(tabId); // fucking snel sluiten
-                isNewTabOpened = false;
-                console.log("about:blank page closed");
-                if (resetTimeout) clearTimeout(resetTimeout);
+                try {
+                    chrome.tabs.remove(tabId, () => {
+                        if (chrome.runtime.lastError) {
+                            console.error("Error closing tab: ", chrome.runtime.lastError);
+                        } else {
+                            isNewTabOpened = false;
+                            console.log("about:blank page closed");
+                            if (resetTimeout) {
+                                clearTimeout(resetTimeout);
+                                resetTimeout = null;
+                            }
+                        }
+                    });
+                } catch (error) {
+                    console.error("Unexpected error: ", error);
+                }
             }
         });
     } else {
